@@ -1,0 +1,380 @@
+h1{
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+}
+
+p{
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;;
+}
+
+/* Ensure html and body take up the full height and remove margin/padding */
+html, body {
+    height: 100%; /* Full viewport height */
+    margin: 0;    /* Remove any default margin */
+    padding: 0;   /* Remove any default padding */
+    overflow: hidden; /* Prevent scrolling */
+    box-sizing: border-box; /* Ensure padding and border are included in dimensions */
+  }
+  
+  /* Fullscreen container with background image and semi-transparent overlay */
+  .get-started-container {
+    position: fixed; /* Ensure it stays fixed to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full viewport height */
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent overflow */
+    background-image: url('/bg.JPG'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    z-index: 0; /* Layer beneath everything else */
+  }
+  
+  /* Semi-transparent overlay with blur */
+  .get-started-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    z-index: 1; /* Layer above background, beneath content */
+  }
+  
+  /* Content inside the container */
+  .get-started-content {
+    position: absolute; /* Position relative to the container */
+    top: 20px; /* Distance from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for horizontal centering */
+    z-index: 2; /* Ensure the content is above the overlay */
+    text-align: center;
+    color: black; /* Adjust text color if needed */
+    padding: 2rem;
+    max-width: 1000px; /* Set a maximum width for content */
+    width: 90%;
+  }
+
+  .get-started-content h1 {
+    font-size: 2.5em;
+  }
+
+  .get-started-content h2 {
+    font-size: 1.2em;
+  }
+  
+  /* Back arrow styling */
+  .back-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 3; /* Ensure the back arrow is above other content */
+  }
+  
+  .back-arrow:hover {
+    opacity: 0.7;
+  }
+
+  .exercise-container {
+    position: fixed; /* Ensure it stays fixed to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full viewport height */
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent overflow */
+    background-image: url('/bg.JPG'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    z-index: 0; /* Layer beneath everything else */
+  }
+  
+  /* Semi-transparent overlay with blur */
+  .exercise-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    z-index: 1; /* Layer above background, beneath content */
+  }
+  
+  /* Content inside the container */
+  .exercise-content {
+    position: absolute; /* Position relative to the container */
+    top: 20px; /* Distance from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for horizontal centering */
+    z-index: 2; /* Ensure the content is above the overlay */
+    text-align: center;
+    color: black; /* Adjust text color if needed */
+    padding: 2rem;
+    max-width: 1000px; /* Set a maximum width for content */
+    width: 90%;
+  }
+
+  .exercise-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 4rem;
+  }
+
+/* Container for exercise buttons */
+.exercise-buttons {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 2rem; /* Space between buttons */
+    margin-top: 2rem; /* Add spacing above the buttons */
+  }
+  
+  /* Individual exercise button */
+  .exercise-button {
+    display: flex;
+    flex-direction: column; /* Stack icon and label vertically */
+    align-items: center; /* Center-align content */
+    background-color: transparent; /* Transparent button background */
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Pointer cursor on hover */
+    text-align: center; /* Center-align text */
+    padding: 1rem; /* Add padding */
+    transition: transform 0.3s ease; /* Smooth scaling on hover */
+  }
+  
+  /* Icon inside the button */
+  .exercise-icon {
+    width: 300px; /* Icon width */
+    height: 300px; /* Icon height */
+    margin-bottom: 0.5rem; /* Space between icon and label */
+  }
+  
+  /* Label inside the button */
+  .exercise-label {
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 600; /* Optional: Bold label text */
+  }
+  
+  /* Button hover effect */
+  .exercise-button:hover {
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+  }
+  
+/* Horizontal container for label and input */
+.input-group-horizontal {
+    margin-top: 2.3rem;
+    display: flex;
+    align-items: center; /* Align label and input vertically */
+    justify-content: center;
+    gap: 1rem; /* Space between label and input */
+  }
+  
+  /* Label styling */
+  .input-label {
+    width: 150px; /* Set a fixed width for labels to ensure alignment */
+    font-size: 1.5rem;
+    margin-right: 1rem; 
+  }
+  
+  /* Text field styling */
+  .text-field {
+    width: 300px; /* Set width for input field */
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in width */
+  }
+  
+  .text-field:focus {
+    border-color: #42599e; /* Add focus effect */
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(105, 140, 127, 0.5);
+  }
+
+  .exercise-dropdown {
+    background: transparent; /* Transparent background */
+    border: 2px solid black; /* Black border */
+    color: black; /* Black text */
+    font-size: 1.4rem; /* Adjust text size */
+    font-weight: 600; /* Bold text */
+    padding: 0.9em 1.5em; /* Padding for the dropdown */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    outline: none; /* Remove outline on focus */
+  }
+  
+  .exercise-dropdown:hover {
+    background-color: #42599e; /* Black background on hover */
+    color: white; /* White text on hover */
+  }
+  
+
+  .exercise-btn {
+    background: transparent;
+    border: 2px solid black;
+    color: black;
+    z-index: 2;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0.9em 1.5em;
+    border-radius: 8px;
+    margin-top: 3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .exercise-btn:hover {
+    background-color:  rgba(0, 0, 0, 0.4); /* Change background to white on hover */
+    color: white; /* Change text color to black on hover */
+    border: 2px solid #42599e;
+  }
+
+  .close-arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 3; /* Ensure the back arrow is above other content */
+  }
+  
+  .close-arrow:hover {
+    opacity: 0.7;
+  }
+
+  .scan-container {
+    position: fixed; /* Ensure it stays fixed to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100vh; /* Full viewport height */
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Prevent overflow */
+    background-image: url('/bg.JPG'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    z-index: 0; /* Layer beneath everything else */
+  }
+  
+  /* Semi-transparent overlay with blur */
+  .scan-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.4); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    z-index: 1; /* Layer above background, beneath content */
+  }
+  
+  /* Content inside the container */
+  .scan-content {
+    position: absolute; /* Position relative to the container */
+    top: 20px; /* Distance from the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for horizontal centering */
+    z-index: 2; /* Ensure the content is above the overlay */
+    text-align: center;
+    color: black; /* Adjust text color if needed */
+    padding: 1rem;
+    max-width: 1000px; /* Set a maximum width for content */
+    width: 90%;
+  }
+
+  .scan-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 1.5rem;
+  }
+
+.correct {
+    color: green;
+    font-weight: bold;
+}
+
+.incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* Camera container for webcam and canvas */
+.camera-container {
+  position: relative;
+  width: 800px; /* Adjust size to match your current setup */
+  height: 600px; 
+  margin: 0 auto; /* Center horizontally */
+  margin-top: 0.8rem; /* Space above */
+  overflow: hidden; /* Prevent overflow issues */
+  border: 2px solid black; /* Black border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: lightgray; /* Light background for placeholder */
+  z-index: 2; /* Keep it above background layers */
+}
+
+/* Camera logo styling */
+.camera-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the logo */
+  z-index: 3; /* Ensure it appears above the video and canvas */
+  pointer-events: none; /* Prevent interaction with the logo */
+}
+
+.camera-logo img {
+  width: 200px; /* Adjust size as needed */
+  height: 200px; /* Adjust size as needed */
+  opacity: 0.7; /* Slightly transparent for a subtle effect */
+}
+
+/* Video element styling */
+.react-webcam {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Fill container */
+  height: 100%;
+  object-fit: cover; /* Scale properly */
+  z-index: 1; /* Video layer */
+}
+
+/* Overlay canvas for pose detection or annotations */
+.overlay-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Fill container */
+  height: 100%;
+  z-index: 2; /* Canvas above video */
+}
+
+
+/* Tip label */
+.camera-tip {
+  margin-top: 1rem; /* Space above the tip label */
+  font-size: 1rem; /* Adjust font size */
+  color: black; /* Text color */
+  text-align: center; /* Center the text */
+  z-index: 2; /* Ensure it's above background layers */
+  max-width: 80%; /* Limit width for better readability */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+}

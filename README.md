@@ -14,6 +14,10 @@ detection to analyse exercise form through your camera.
 - **Backend:** Python, FastAPI
 - **ML/AI:** MediaPipe, Jupyter Notebook
 
+## Team
+- Felise Amore Pandiora
+- Edelyne Keisha
+
 ## Live Demo
 https://corect-ai-fitness.vercel.app/
 
